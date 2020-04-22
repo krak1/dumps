@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>MyBlog</title>
+</head>
+<body>
+    <h1>Create Your Article</h1>
+    <br>
+<form method="POST">{% csrf_token %}
+  {% for field in form %}
+    {{ field.html_name }}
+    {{ field }}<br>
+  {% endfor %}
+    <input type="submit" value="Save" />
+    <a href = "{{ form.dyn_url_home }}"><input type="button" value="Cancel"></a>
+</form>
+</body>
+</html>

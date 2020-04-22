@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>MyBlog</title>
+</head>
+<body>
+<center><h1>Welcome To MyBlog</h1></center>
+    <br>
+    <a href="http://127.0.0.1:8000/blog/create"><input type="button", value="Create New" /></a><hr>
+<p>{% for inst in object_list %}
+        <b>{{ inst.Title }}</b><a href = "{{ inst.get_absolute_url }}">view</a><br>
+        <i>{{ inst.time }}</i><br><br>
+        {{ inst.Context }}<br>
+        By: {{ inst.WriterName }}<br><br><br>
+        <hr>
+    {% endfor %}
+</body>
+</html>

@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>MyBlog</title>
+</head>
+<body>
+<center><h2>{{ object.Title }}</h2></center>
+    <br>
+    <hr>
+<p>
+        <i>{{ object.time }}</i><br><br>
+            {{ object.Context }}<br><br>
+        By: {{ object.WriterName }}<br><br><br>
+<hr><a href="{{ object.get_home_url }}"><input type="button", value="Back" /></a>
+    <a href="{{ object.get_edit_url}}"><input type="button", value="Edit" /></a>
+    <a href="{{ object.get_dyn_del_url }}"><input type="button", value="Delete" /></a>
+</body>
+</html>
